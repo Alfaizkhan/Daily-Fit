@@ -39,13 +39,7 @@ class CustomTextView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: containerWidth,
-      decoration: isBorder == true
-          ? BoxDecoration(
-              color: Colors.grey.shade300,
-              borderRadius: const BorderRadius.all(Radius.circular(20)))
-          : null,
+    return Padding(
       padding: EdgeInsets.fromLTRB(
           paddingLeft!, paddingTop!, paddingRight!, paddingBottom!),
       child: Text(
@@ -53,16 +47,16 @@ class CustomTextView extends StatelessWidget {
         maxLines: maxLines!,
         overflow: TextOverflow.ellipsis,
         textAlign: isCenterAlign == true ? TextAlign.center : TextAlign.left,
-        style: GoogleFonts.aBeeZee(
-                fontWeight: fontWeight,
-                fontSize: textSize,
-                color: textColor,
-                letterSpacing: letterSpacing,
-                height: height,
-                decoration: isUnderline == true
-                    ? TextDecoration.underline
-                    : TextDecoration.none),
-        ),
+        style: GoogleFonts.lato(
+            fontWeight: fontWeight,
+            fontSize: textSize,
+            color: textColor,
+            letterSpacing: letterSpacing,
+            height: height,
+            decoration: isUnderline == true
+                ? TextDecoration.underline
+                : TextDecoration.none),
+      ),
     );
   }
 }
