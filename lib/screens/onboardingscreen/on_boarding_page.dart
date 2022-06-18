@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:daily_fit/const/const_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -70,11 +68,11 @@ class OnBoardingPage extends StatelessWidget {
                             margin: const EdgeInsets.symmetric(horizontal: 3),
                             width: 20.0,
                             decoration: BoxDecoration(
-                              color:
-                                  _onboardingController.selectedPageIndex.value ==
-                                          index
-                                      ? AppColors.kOnPrimaryColor
-                                      : Colors.black45,
+                              color: _onboardingController
+                                          .selectedPageIndex.value ==
+                                      index
+                                  ? AppColors.kOnPrimaryColor
+                                  : AppColors.kGreyColor,
                               borderRadius: const BorderRadius.all(
                                 Radius.circular(8.0),
                               ),
