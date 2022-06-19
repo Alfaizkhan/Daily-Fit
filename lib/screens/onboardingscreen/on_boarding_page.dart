@@ -1,4 +1,5 @@
 import 'package:daily_fit/const/const_strings.dart';
+import 'package:daily_fit/screens/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -130,7 +131,9 @@ class OnBoardingPage extends StatelessWidget {
                 buttonColor: Colors.white,
                 isBorder: true,
                 margin: const EdgeInsets.only(top: 16, left: 24, right: 24),
-                onButtonClick: () => {},
+                onButtonClick: () => {
+                  Get.off(() => LoginPage()),
+                },
               ),
             ],
           ),
